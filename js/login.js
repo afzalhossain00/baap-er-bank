@@ -12,6 +12,12 @@ document.getElementById('btn-submit').addEventListener('click', function () {
     const passwordField = document.getElementById('user-password');
     const password = passwordField.value;
 
-    // DO NOT VERIFY email password on the clint side
-    // step 4: verify email and password
+    // DANGER: DO NOT VERIFY email password on the clint side
+    // step 4: verify email and password and check wheather valid user or not
+    if (email === 'afzal@hossain.com' && password === 'secret') {
+        window.location.href = 'bank.html';
+    }
+    else {
+        alert('Give correct information')
+    }
 });
